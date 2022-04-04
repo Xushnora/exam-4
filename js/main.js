@@ -116,13 +116,13 @@ function postSlider() {
 //     postSlider();
 // })
 
-// rightBtn.addEventListener('click', () => {
-//     elSliderList.style.transform =`translateX(150px)`
-// })
+rightBtn.addEventListener('click', () => {
+    elSliderList.style.transform =`translateX(150px)`
+})
 
-// leftBtn.addEventListener('click', () => {
-//     elSliderList.style.transform =`translateX(-150px)`
-// })
+leftBtn.addEventListener('click', () => {
+    elSliderList.style.transform =`translateX(-150px)`
+})
 
 
 

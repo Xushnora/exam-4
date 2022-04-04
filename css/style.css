@@ -72,8 +72,8 @@ body {
 .slider-box {
     position: relative;
     padding-top: 80px;
-    /* overflow-x: hidden; */
-    overflow-x: scroll;
+    overflow-x: hidden;
+    /* overflow-x: scroll; */
     /* transform: translateX(300px); */
 }
 
