@@ -86,7 +86,7 @@ function render(stories) {
     })
 }
 
-render(stories);
+// render(stories);
 
 
 // ================== post slider list ===============
