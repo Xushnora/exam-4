@@ -74,7 +74,7 @@ function render(stories) {
                 <div class="sumbit-box">
                     <input type="text" placeholder="Reply to najottalim...">
                     <button type="submit">
-                        <i class='bx bxl-telegram'></i>
+                        <i class='bx bx-navigation'></i>
                     </button>
                 </div>
             </div>
@@ -96,7 +96,7 @@ function render(stories) {
                 <div class="sumbit-box">
                     <input type="text" placeholder="Reply to najottalim...">
                     <button type="submit">
-                        <i class='bx bxl-telegram'></i>
+                        <i class='bx bx-navigation'></i>
                     </button>
                 </div>
             </div>

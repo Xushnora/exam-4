@@ -177,6 +177,11 @@ body {
     font-size: 22px;
  }
 
+.active .sumbit-box .bx {
+    color: #fff;
+    font-size: 28px;
+ }
+
  ::placeholder {
      font-size: 13px;
      color: #fff;
