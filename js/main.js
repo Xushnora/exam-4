@@ -27,7 +27,7 @@ const stories = [
     {
         id: 4,
         name: "smm",
-        media: ["media/MUSOBAQA tgg(Android).mp4", "media/MUSOBAQA tgg(Android).mp4"],
+        media: ["media/alohida-mavzu.mp4", "media/MUSOBAQA tgg(Android).mp4"],
         avatar: "imgs/img4.jpg",
         type: 'vedio',
         active: false
@@ -110,7 +110,6 @@ render(stories);
 
 const elItems = document.querySelectorAll('.slider-item');
 
-function items0() {
     elItems[0].addEventListener('click', () => {
         elItems[0].classList.add('active');
         elItems[1].classList.remove('active');
@@ -120,8 +119,6 @@ function items0() {
         elItems[5].classList.remove('active');
         elSliderList.style.transform =`translateX(400px)`
     })
-}
-function items1() {
     elItems[1].addEventListener('click', () => {
         elItems[1].classList.add('active');
         elItems[0].classList.remove('active');
@@ -131,8 +128,6 @@ function items1() {
         elItems[5].classList.remove('active');
         elSliderList.style.transform =`translateX(180px)`
     })
-}
-function items2() {
     elItems[2].addEventListener('click', () => {
         elItems[2].classList.add('active');
         elItems[0].classList.remove('active');
@@ -142,8 +137,6 @@ function items2() {
         elItems[5].classList.remove('active');
         elSliderList.style.transform =`translateX(-25px)`
     })
-}
-function items3() {
     elItems[3].addEventListener('click', () => {
         elItems[3].classList.add('active');
         elItems[0].classList.remove('active');
@@ -153,8 +146,6 @@ function items3() {
         elItems[5].classList.remove('active');
         elSliderList.style.transform =`translateX(-230px)`
     })
-}
-function items4() {
     elItems[4].addEventListener('click', () => {
         elItems[4].classList.add('active');
         elItems[0].classList.remove('active');
@@ -164,8 +155,6 @@ function items4() {
         elItems[5].classList.remove('active');
         elSliderList.style.transform =`translateX(-440px)`
     })
-}
-function items5() {
     elItems[5].addEventListener('click', () => {
         elItems[5].classList.add('active');
         elItems[0].classList.remove('active');
@@ -175,52 +164,50 @@ function items5() {
         elItems[4].classList.remove('active');
         elSliderList.style.transform =`translateX(-650px)`
     })
-}
-
-items0()
-items1()
-items2()
-items3()
-items4()
-items5()
-
 
 // ================== post slider list ===============
 
+
 const leftBtn = document.querySelector('.left__btn');
 const rightBtn = document.querySelector('.right__btn');
-const itemCard = document.querySelectorAll('.slider-item');
 
+// Right button boslignada eng oxirgisiga o'tasiz,
 rightBtn.addEventListener('click', ()=> {
     stories.forEach(item => {
         if(item.id == 1) {
-            items1()
-        } else if (item.id == 2) {
-            items2()
-        }
+            elItems[5].classList.add('active');
+            elItems[0].classList.remove('active');
+            elItems[1].classList.remove('active');
+            elItems[2].classList.remove('active');
+            elItems[3].classList.remove('active');
+            elItems[4].classList.remove('active');
+            elSliderList.style.transform =`translateX(-650px)`
+        } 
     });
 })
 
-let idx = 0;
+//  left button bosilganda eng birinchisiga o'tasiz
+leftBtn.addEventListener('click', ()=> {
+    stories.forEach(item => {
+        if(item.id == 1) {
+            elItems[0].classList.add('active');
+            elItems[1].classList.remove('active');
+            elItems[2].classList.remove('active');
+            elItems[3].classList.remove('active');
+            elItems[4].classList.remove('active');
+            elItems[5].classList.remove('active');
+            elSliderList.style.transform =`translateX(400px)`
+        } 
 
-function postSlider() {
-    if(idx > itemCard.length-4){
-        idx = 0;
-    }
-    else if(idx < 0) {
-        idx = itemCard-4
-    }
+    });
+})
 
-    elSliderList.style.transform =`translateX(${-idx*150}px)`
-}
-// rightBtn.addEventListener('click', ()=> {
-//     idx++;
-//     postSlider();
-// })
-// leftBtn.addEventListener('click', ()=> {
-//     idx--;
-//     postSlider();
-// })
 
+const closeBtn = document.querySelector('.close-btn');
+const storiesWindow = document.querySelector('.container');
+
+closeBtn.addEventListener('click', ()=> {
+    storiesWindow.style.display = "none";
+})
 
 
